@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Revisión de Solicitud - Admin</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../../shared/js/routeGuard.js"></script>
+    <script src="../../shared/js/adminGuard.js"></script>
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name">Administrador</p>
+                    <p class="user-role">Talento Humano</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-gauge"></i> Inicio</a>
+                <a href="gestionar.html" class="nav-item active"><i class="fa-solid fa-clipboard-list"></i> Gestionar Solicitudes</a>
+                <a href="usuarios.html" class="nav-item"><i class="fa-solid fa-users"></i> Usuarios</a>
+                <a href="empleados.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> Empleados</a>
+                <a href="mensajes.html" class="nav-item"><i class="fa-solid fa-envelope"></i> Mensajes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="btnCerrarSesion" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <main class="main-content" style="padding: 40px;">
+            <a href="gestionar.html" style="text-decoration: none; color: #64748b;"><i class="fa-solid fa-arrow-left"></i> Volver a la lista</a>
+            
+            <div class="card" id="detalleSolicitud" style="max-width: 800px; margin: 20px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <h2 id="nombreEmpleado" style="margin-bottom: 5px;">Cargando...</h2>
+                <p id="emailEmpleado" style="color: #64748b; margin-bottom: 20px;"></p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+                    <div><p><strong>Cargo Actual:</strong> <span id="cargoActual"></span></p></div>
+                    <div><p><strong>Cargo Solicitado:</strong> <span id="cargoSolicitado"></span></p></div>
+                    <div><p><strong>Tipo:</strong> <span id="tipoSolicitud"></span></p></div>
+                    <div><p><strong>Fecha:</strong> <span id="fechaSolicitud"></span></p></div>
+                </div>
+
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <strong>JUSTIFICACIÓN</strong>
+                    <p id="justificacionText" style="margin-top: 10px;"></p>
+                </div>
+
+                <div style="margin-top: 30px; display: flex; gap: 15px;">
+                    <button class="btn-reject" style="flex: 1; padding: 12px; background: #dc2626; color: white; border: none; border-radius: 6px; cursor: pointer;" onclick="cambiarEstado('Rechazada')">Rechazar Solicitud</button>
+                    <button class="btn-approve" style="flex: 1; padding: 12px; background: #059669; color: white; border: none; border-radius: 6px; cursor: pointer;" onclick="cambiarEstado('Aprobada')">Aprobar Solicitud</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/logout.js"></script>
+    <script src="../js/revision.js"></script>
+</body>
+</html>

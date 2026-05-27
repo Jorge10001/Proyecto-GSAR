@@ -1,0 +1,65 @@
+.gestion-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: stretch;
+}
+
+.info-column, .decision-column {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid #edf2f7;
+    flex: 1;
+}
+
+.info-column h3, .decision-column h3 {
+    margin-bottom: 25px;
+    color: #2d3748;
+    border-bottom: 2px solid #f7fafc;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.data-group {
+    margin-bottom: 20px;
+}
+
+.data-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-group p {
+    font-size: 16px;
+    color: #2d3748;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.btn-download {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.btn-save {
+    background-color: #2f855a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-save:hover { background-color: #276749; }

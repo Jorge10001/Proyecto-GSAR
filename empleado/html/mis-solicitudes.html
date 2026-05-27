@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Solicitudes - Portal Empleado</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/mis-solicitudes.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name" id="user-side-name">Cargando...</p>
+                    <p class="user-role" id="user-side-role">Cargando...</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="requisitos.html" class="nav-item"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+                <a href="nueva-solicitud.html" class="nav-item"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+                <a href="mis-solicitudes.html" class="nav-item active"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+                <a href="contacto.html" class="nav-item active"><i class="fa-solid fa-envelope"></i> Contacto</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="btnLogout" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Mis Solicitudes</h1>
+                <a href="nueva-solicitud.html" class="btn-primary">+ Nueva Solicitud</a>
+            </div>
+
+            <div class="solicitudes-list" id="lista-solicitudes">
+                </div>
+        </main>
+    </div>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../js/misSolicitudes.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Solicitud - Portal Empleado</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/nueva-solicitud.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name" id="user-side-name">Cargando...</p>
+                    <p class="user-role" id="user-side-role">Cargando...</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="requisitos.html" class="nav-item"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+                <a href="nueva-solicitud.html" class="nav-item active"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+                <a href="mis-solicitudes.html" class="nav-item"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+                <a href="contacto.html" class="nav-item active"><i class="fa-solid fa-envelope"></i> Contacto</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="btnLogout" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Nueva Solicitud</h1>
+                <p>Complete el formulario para presentar su solicitud ante Talento Humano</p>
+            </header>
+
+            <div class="form-card">
+                <div class="user-info-grid" id="info-solicitante">
+                    </div>
+
+                <form id="formSolicitud">
+                    <div class="form-group">
+                        <label>Tipo de Solicitud</label>
+                        <select id="tipo" required>
+                            <option value="Ascenso">Ascenso</option>
+                            <option value="Recategorización">Recategorización</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cargo / Categoría Solicitada</label>
+                        <input type="text" id="cargoSolicitado" placeholder="Ej: Analista de Sistemas SP5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Justificación <small>(mín. 30 caracteres)</small></label>
+                        <textarea id="justificacion" rows="5" placeholder="Describa sus méritos y logros..." required minlength="30"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Link de Documentos (OneDrive/Google Drive)</label>
+                        <input type="url" id="evidencia" placeholder="https://dominio.com/su-archivo" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../js/nueva-solicitud.js"></script>
+</body>
+</html>

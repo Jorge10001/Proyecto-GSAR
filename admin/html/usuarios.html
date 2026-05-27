@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Usuarios - ULEAM</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="../../shared/js/routeGuard.js"></script>
+    <script src="../../shared/js/adminGuard.js"></script>
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name">Administrador</p>
+                    <p class="user-role">Talento Humano</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item"><i class="fa-solid fa-gauge"></i> Inicio</a>
+                <a href="gestionar.html" class="nav-item"><i class="fa-solid fa-clipboard-list"></i> Gestionar Solicitudes</a>
+                <a href="usuarios.html" class="nav-item active"><i class="fa-solid fa-users"></i> Usuarios</a>
+                <a href="empleados.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> Empleados</a>
+                <a href="mensajes.html" class="nav-item"><i class="fa-solid fa-envelope"></i> Mensajes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="btnCerrarSesion" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="welcome-header">
+                <h1>Gestión de Usuarios</h1>
+                <p>Creación y administración de cuentas para empleados</p>
+            </header>
+
+            <section class="card" style="margin-bottom: 20px; padding: 25px;">
+                <h3>Registrar Nueva Cuenta</h3>
+                <form id="formUsuario" style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 15px; align-items: end;">
+                    <div>
+                        <label>Nombre Completo</label>
+                        <input type="text" id="nombreUsuario" required>
+                    </div>
+                    <div>
+                        <label>Correo Institucional</label>
+                        <input type="email" id="emailUsuario" required>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <select id="rolUsuario">
+                            <option value="empleado">Empleado</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                        <button type="submit" class="btn-action">Crear Usuario</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card table-container">
+                <h3>Lista de Usuarios Registrados</h3>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-usuarios">
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/logout.js"></script>
+    <script src="../js/usuarios.js"></script>
+</body>
+</html>

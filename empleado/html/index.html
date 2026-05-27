@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Empleado - ULEAM</title>
+    <script src="../../shared/js/routeGuard.js"></script>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name" id="user-side-name">Cargando...</p>
+                    <p class="user-role" id="user-side-role">Analista de Sistemas</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="requisitos.html" class="nav-item"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+                <a href="nueva-solicitud.html" class="nav-item"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+                <a href="mis-solicitudes.html" class="nav-item"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+                <a href="contacto.html" class="nav-item"><i class="fa-solid fa-envelope"></i> Contacto</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button type="button" class="btn-logout" id="btnLogout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                    </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="welcome-header">
+                <h1>Bienvenido/a, <span id="nombre-display">Usuario</span></h1>
+                <p>Analista de Sistemas SP3 - Dirección de Tecnologías</p>
+            </header>
+
+            <div class="last-status-banner">
+                <div class="status-info">
+                    <p><strong>Última solicitud:</strong> <span id="last-solic-type">Ascenso a Analista de Sistemas SP4</span></p>
+                    <span class="status-badge status-aprobado" id="last-solic-status">Estado: Aprobada</span>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="actions-grid">
+                <a href="requisitos.html" class="action-card">
+                    <div class="card-icon blue"><i class="fa-solid fa-book"></i></div>
+                    <div class="card-text">
+                        <h3>Consultar Requisitos</h3>
+                        <p>Revise los criterios mínimos para ascensos y recategorizaciones antes de enviar su solicitud.</p>
+                    </div>
+                </a>
+
+                <a href="nueva-solicitud.html" class="action-card">
+                    <div class="card-icon green"><i class="fa-solid fa-paper-plane"></i></div>
+                    <div class="card-text">
+                        <h3>Enviar Solicitud</h3>
+                        <p>Complete el formulario para presentar una nueva solicitud de ascenso o recategorización con sus documentos.</p>
+                    </div>
+                </a>
+
+                <a href="mis-solicitudes.html" class="action-card">
+                    <div class="card-icon purple"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="card-text">
+                        <h3>Mis Solicitudes</h3>
+                        <p>Consulte el estado actualizado de todas sus solicitudes enviadas y las observaciones del administrador.</p>
+                    </div>
+                </a>
+
+                <a href="contacto.html" class="action-card">
+                    <div class="card-icon red"><i class="fa-solid fa-headset"></i></div>
+                    <div class="card-text">
+                        <h3>Contactar Administración</h3>
+                        <p>Envíe una consulta directa al equipo de Talento Humano sobre su proceso o cualquier inquietud.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="info-box">
+                <h4><i class="fa-solid fa-circle-info"></i> Información Importante</h4>
+                <ul>
+                    <li>Revise los requisitos antes de enviar su solicitud para asegurar que cumple con todos los criterios.</li>
+                    <li>Las solicitudes son evaluadas en un plazo máximo de 60 días hábiles.</li>
+                    <li>Puede adjuntar documentos de respaldo (PDF, DOC — máx. 5 MB por archivo).</li>
+                    <li>Una vez enviada su solicitud, podrá consultar el estado desde "Mis Solicitudes".</li>
+                </ul>
+            </div>
+
+            <footer class="employee-footer">
+                <div class="data-item">
+                    <label>Departamento</label>
+                    <span>Dirección de Tecnologías</span>
+                </div>
+                <div class="data-item">
+                    <label>Cargo Actual</label>
+                    <span id="display-cargo">Analista de Sistemas SP3</span>
+                </div>
+                <div class="data-item">
+                    <label>Fecha de Ingreso</label>
+                    <span>28 de Febrero de 2022</span>
+                </div>
+                <div class="data-item">
+                    <label>Solicitudes enviadas</label>
+                    <span id="solic-count">1</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../js/inicioEmpleado.js"></script>
+</body>
+</html>
