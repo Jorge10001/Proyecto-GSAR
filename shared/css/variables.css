@@ -1,0 +1,21 @@
+/* ==========================================================================
+   shared/css/variables.css - PALETA INSTITUCIONAL ULEAM
+   ========================================================================== */
+:root {
+    /* Colores Corporativos */
+    --color-primary: #0d3b66;      /* Azul Marino ULEAM */
+    --color-primary-hover: #092c4e;/* Azul Oscuro */
+    --color-secondary: #f4d35e;    /* Dorado/Amarillo sutil */
+    --color-background: #f8fafc;   /* Gris claro de fondo */
+    --color-white: #ffffff;
+    
+    /* Tonos de texto y bordes */
+    --text-main: #1a202c;
+    --text-muted: #718096;
+    --border-color: #e2e8f0;
+    
+    /* Estados */
+    --color-success: #27ae60;
+    --color-pending: #3182ce;
+    --color-danger: #e53e3e;
+}

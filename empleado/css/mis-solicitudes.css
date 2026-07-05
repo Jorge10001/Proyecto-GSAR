@@ -1,0 +1,72 @@
+/* Centrado del contenedor de contenido */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto !important;
+    padding: 0 20px;
+}
+
+.page-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px; 
+}
+
+/* Ajuste del botón para que sea consistente */
+.btn-primary { 
+    background-color: #002d55; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+/* Mejora de la lista de solicitudes */
+.solicitud-card { 
+    background: white; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: 0.2s;
+}
+
+.solicitud-card:hover { border-color: #002d55; }
+
+.card-main { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+.card-footer { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: #64748b; 
+    font-size: 0.9rem; 
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+/* Estados */
+.status-pill { 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 0.8rem; 
+    font-weight: 600; 
+}
+
+.status-pill.aprobado { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.status-pill.pendiente { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+
+.btn-link { 
+    background: none; 
+    border: none; 
+    color: #002d55; 
+    cursor: pointer; 
+    font-weight: bold; 
+}

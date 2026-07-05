@@ -1,0 +1,43 @@
+/* Corrección de centrado para el nuevo diseño */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto !important;
+    padding: 0 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.form-card, .history-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+/* Ajuste del botón para que coincida con el estilo de la app */
+.btn-primary {
+    background-color: #002d55;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #00407a;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

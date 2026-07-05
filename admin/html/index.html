@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - ULEAM</title>
+    <script src="../../shared/js/routeGuard.js"></script>
+    <script src="../../shared/js/adminGuard.js"></script>
+    
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <p class="user-name" id="admin-name">Cargando...</p>
+                    <p class="user-role">Gestión de Talento Humano</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item active"><i class="fa-solid fa-gauge"></i> Inicio</a>
+                <a href="gestionar.html" class="nav-item"><i class="fa-solid fa-clipboard-list"></i> Gestionar Solicitudes</a>
+                <a href="usuarios.html" class="nav-item"><i class="fa-solid fa-users"></i> Usuarios</a>
+                <a href="empleados.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> Empleados</a>
+                <a href="mensajes.html" class="nav-item"><i class="fa-solid fa-envelope"></i> Mensajes</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="btnCerrarSesion" class="btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="welcome-header">
+                <h1>Panel de Control Administrativo</h1>
+                <p>Resumen global de procesos de ascenso y recategorización</p>
+            </header>
+
+            <div class="stats-grid">
+                <div class="card stat-card blue">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-info">
+                        <h3>Total Usuarios</h3>
+                        <p id="totalUsuarios">0</p>
+                    </div>
+                </div>
+                <div class="card stat-card yellow">
+                    <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3>Pendientes</h3>
+                        <p id="totalPendientes">0</p>
+                    </div>
+                </div>
+                <div class="card stat-card green">
+                    <div class="stat-icon"><i class="fa-solid fa-check-double"></i></div>
+                    <div class="stat-info">
+                        <h3>Aprobadas</h3>
+                        <p id="totalAprobadas">0</p>
+                    </div>
+                </div>
+                <div class="card stat-card red">
+                    <div class="stat-icon"><i class="fa-solid fa-ban"></i></div>
+                    <div class="stat-info">
+                        <h3>Rechazadas</h3>
+                        <p id="totalRechazadas">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-content-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-top: 20px;">
+                <section class="card">
+                    <h3>Estado de Solicitudes</h3>
+                    <canvas id="chartSolicitudes"></canvas>
+                </section>
+
+                <section class="card">
+                    <div class="section-header" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <h3>Últimas Solicitudes</h3>
+                        <a href="gestionar.html" class="btn-view-all">Ver todas</a>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Empleado</th>
+                                    <th>Tipo</th>
+                                    <th>Estado</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaRecientesAdmin">
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/logout.js"></script>
+    <script src="../js/inicioAdmin.js"></script>
+</body>
+</html>

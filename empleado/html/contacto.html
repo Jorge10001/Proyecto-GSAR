@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Portal Empleado ULEAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/inicio.css"> 
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo">
+            <span style="font-weight: bold; color: #002d55; font-size: 1.2rem;">ULEAM</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requisitos.html"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+            <a href="nueva-solicitud.html"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+            <a href="mis-solicitudes.html"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+            <a href="contacto.html" class="active"><i class="fa-solid fa-envelope"></i> Contacto</a>
+        </nav>
+
+        <div class="user-actions">
+            <button type="button" class="btn-logout" id="btnCerrarSesion">
+                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <header class="content-header" style="margin-bottom: 30px;">
+            <h1>Contactar Administración</h1>
+            <p>Envíe sus dudas o consultas al equipo de Talento Humano</p>
+        </header>
+
+        <div class="contact-grid">
+            <div class="form-card">
+                <h3>Nuevo Mensaje</h3>
+                <form id="contactoForm">
+                    <div class="form-group">
+                        <label>Asunto</label>
+                        <input type="text" id="asunto" placeholder="Ej: Consulta sobre requisitos" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea id="mensaje" rows="6" placeholder="Escriba aquí su consulta..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <div class="history-card">
+                <h3>Historial de Consultas</h3>
+                <div id="historialMensajes" class="message-list">
+                    <p class="empty-state">No tiene consultas previas.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/logout.js"></script>
+    <script src="../js/conacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Empleado - ULEAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo">
+            <span style="font-weight: bold; color: #002d55; font-size: 1.2rem;">ULEAM</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requisitos.html"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+            <a href="nueva-solicitud.html"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+            <a href="mis-solicitudes.html"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+            <a href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+        </nav>
+
+        <div class="user-actions">
+            <button type="button" class="btn-logout" id="btnCerrarSesion">
+                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Bienvenido/a, <span id="nombre-display">Usuario</span></h1>
+                <p class="role-text" id="rol-display">Cargando...</p>
+
+            </div>
+            
+            <div class="hero-image">
+                <img src="../../assets/logos/uleam-logo-png_seeklogo-315386.png" alt="Logo ULEAM">
+            </div>
+        </section>
+
+        <div class="last-status-banner">
+            <div class="status-info">
+                <p><strong>Última solicitud:</strong> <span id="last-solic-type">Ascenso a Analista de Sistemas SP4</span></p>
+                <span class="status-badge" id="last-solic-status">Estado: Aprobada</span>
+            </div>
+        </div>
+    </main>
+<script src="../../shared/js/storage.js"></script>
+<script src="../../shared/js/auth.js"></script>
+<script src="../js/inicioEmpelado.js"></script>
+<script src="../../shared/js/logout.js"></script>
+</body>
+</html>

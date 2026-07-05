@@ -1,0 +1,50 @@
+/* Estilos específicos para la gestión */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 15px;
+    background-color: #f8fafc;
+    color: #64748b;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.admin-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Badge de estado */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-pendiente { background: #fef3c7; color: #92400e; }
+.status-aprobada { background: #d1fae5; color: #065f46; }
+.status-rechazada { background: #fee2e2; color: #991b1b; }
+
+/* Botón de acción */
+.btn-review {
+    background: #3182ce;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-review:hover { background: #2b6cb0; }

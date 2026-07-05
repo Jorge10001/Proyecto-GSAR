@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Solicitudes - Portal Empleado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/mis-solicitudes.css">
+</head>
+<body>
+
+    <header class="top-navbar">
+        <div class="logo">
+            <span style="font-weight: bold; color: #002d55; font-size: 1.2rem;">ULEAM</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requisitos.html"><i class="fa-solid fa-file-lines"></i> Requisitos</a>
+            <a href="nueva-solicitud.html"><i class="fa-solid fa-plus-circle"></i> Nueva Solicitud</a>
+            <a href="mis-solicitudes.html" class="active"><i class="fa-solid fa-list-check"></i> Mis Solicitudes</a>
+            <a href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+        </nav>
+
+        <div class="user-actions">
+            <button type="button" class="btn-logout" id="btnCerrarSesion">
+                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Mis Solicitudes</h1>
+            <a href="nueva-solicitud.html" class="btn-primary">
+                <i class="fa-solid fa-plus"></i> Nueva Solicitud
+            </a>
+        </div>
+
+        <div class="solicitudes-list" id="lista-solicitudes">
+            </div>
+    </main>
+
+    <script src="../../shared/js/storage.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/logout.js"></script>
+    <script src="../js/misSolicitudes.js"></script>
+</body>
+</html>

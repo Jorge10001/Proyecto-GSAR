@@ -1,0 +1,57 @@
+/* Centrado del contenido principal */
+.main-content {
+    max-width: 800px; /* Un poco más estrecho para formularios */
+    margin: 40px auto !important;
+    padding: 0 20px;
+}
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.user-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    color: #334155;
+}
+
+/* Mejora de inputs y selects */
+input, textarea, select { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+    box-sizing: border-box; /* Importante para que no se desborde */
+}
+
+.btn-submit {
+    background: #002d55;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #00407a;
+}
