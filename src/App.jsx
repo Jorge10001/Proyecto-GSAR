@@ -234,10 +234,6 @@ function Login({ usuarios, onLogin }) {
             <i className="fa-solid fa-right-to-bracket"></i>
             Iniciar sesión
           </button>
-          <div className="demo-users">
-            <span>Admin: admin@uleam.edu.ec / Admin123</span>
-            <span>Empleado: empleado@uleam.edu.ec / Empleado123</span>
-          </div>
         </form>
       </section>
     </main>
